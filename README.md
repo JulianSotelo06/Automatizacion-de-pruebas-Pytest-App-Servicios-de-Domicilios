@@ -19,13 +19,12 @@
 1. "headers" y "user_body", para la creación de usuarios.
 2. "create_kit_header" y "kit_body", para la creación de kits.
 
-🔴 "_sender_stand_request.py_"; en este archivo se almacenan las siguientes funciones:
+🔴 "_sender_stand_request.py_"; en este archivo se almacena la siguiente función:
 
 ⚠️ Se deben importar al archivo: configuration, data y requests
 
 1. _def post_new_user(body):_ función para crear un nuevo usuario.
-2. _def get_new_user_token():_ función para recibir el token generado al crear el cliente.
-3. _def post_new_cliente_kit(kit_body, auth_token):_ función para crear un kit con el token generado.
+2. _def post_new_cliente_kit(kit_body)_ función para crear un kit.
 
 🟡 "_create_kit_name_test.py_"; en este archivo se ejecutaran las pruebas de la lista de comprobación.
 
@@ -34,8 +33,9 @@
 En el archivo "_create_kit_name_test.py_", se escriben las siguientes funciones:
 
 1. _def get_kit_body(name):_ función para cambiar los valores "name" al crear un kit.
-2. _def positive_assert(kit_body):_ función para una prueba con resultado positivo.
-3. _def negative_assert_code_400(kit_body):_ función para una prueba con resultado negativo.
+2. _def get_new_user_token():_ función para recibir el token generado al crear el cliente.
+3. _def positive_assert(kit_body):_ función para una prueba con resultado positivo.
+4. _def negative_assert_code_400(kit_body):_ función para una prueba con resultado negativo.
 
 Después de declarar las funciones anteriores, se diseñan las pruebas para cada ítem de la lista de comprobación, cambiando unicamente el valor de "name".
 
